@@ -1,21 +1,26 @@
-const giftBox = document.querySelector(".box");
+const Box = document.querySelector(".box");
 const fruits = document.querySelectorAll(".fruit");
+const yellowbox = document.querySelector(".yellowbox");
 
-giftBox.addEventListener("click", function() {
-  giftBox.classList.toggle("open");
 
+Box.addEventListener("click", function() {
+  Box.classList.toggle("open");
+  yellowbox.classList.toggle("active");
+  
   fruits.forEach(function(fruit) {
     fruit.style.display = "block";
 
+
+    
+    var random2 = Math.random();
+    var range2 = 1500;
+    var min2 = -750;
+    var translateX = 'translateX(' + (random2 * range2 + min2) + 'px)';
+    
  var random1 = Math.random();
-    var range1 = 700;
+    var range1 = 400;
     var min1 = 0;
     var translateY = 'translateY(' + (random1 * range1 + min1) + 'px)';
-
-    var random2 = Math.random();
-    var range2 = 2500;
-    var min2 = -1250;
-    var translateX = 'translateX(' + (random2 * range2 + min2) + 'px)';
 
 
 
