@@ -21,8 +21,8 @@
   </div>
    <div id= "in"> &nbspi &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp n</div>
 
-<div class="box">
 
+<div class="box">
   
   <div class="yellowbox">
       </div>
@@ -34,60 +34,6 @@
         <div class="eye"></div>
         <div class="eye"></div>
       </div>
-    <!-- css -->
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        /* box-sizing: 属性允许以特定的方式定义匹配某个区域的特定元素 */
-      }
-
-
-      .eyes {
-        top: 50px;
-        left: 40px;
-        position: relative;
-        display: flex;
-      }
-      .eyes .eye {
-        width: 80px;
-        height: 80px;
-        background: WHITE;
-        border-radius: 50%;
-        position: relative;
-        display: block;
-        margin: 0 15px;
-      }
-
-      .eyes .eye::before {
-        position: absolute;
-        content: " ";
-        top: 50%;
-        left: 30px;
-        width: 40px;
-        height: 40px;
-        background: #333;
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-      }
-    </style>
-
-    <!-- JAVASCRIPT -->
-    <script>
-      document.querySelector("body").addEventListener("mousemove", eyeball);
-      function eyeball() {
-        var eye = document.querySelectorAll(".eye");
-        eye.forEach(function(eye) {
-          let x = eye.getBoundingClientRect().left + eye.clientWidth / 2;
-          let y = eye.getBoundingClientRect().top + eye.clientHeight / 2;
-          let radian = Math.atan2(event.pageX - x, event.pageY - y);
-          let rot = radian * (180 / Math.PI) * -1 + 0;
-          eye.style.transform = "rotate(" + rot + "deg)";
-        });
-      }
-    </script>    
-    
     <div class="smile">
         <div class="corner"></div>
         <div class="corner right"></div>
@@ -116,3 +62,4 @@
 
 </body>
 </html>
+
