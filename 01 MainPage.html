@@ -1,29 +1,105 @@
-<head>
+ <head>
 
   <link rel="stylesheet" href="01 Mainpage.css">
 
 </head>
 
 <body>
-    <a href="02 Gridpage.html"> <h2>100 Trash in Yds Eye</h2></a>
-    <p>Message send and scroll to bottom enabled </p> 
+
+<div id="linkwrapper">
+   <a href="02 Gridpage.html" id="link"> 100 Trash &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Yds Eye</a>
+  </div>
+   <div id= "in"> &nbspi &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp n</div>
 
 <div class="box">
-  <div class="lid">
-    <div class="top-lid"></div>
+
+  
+  <div class="yellowbox">
+      </div>
+        <div class="lid">
+        <div class="open.lid"> 
+           <div class="smileyface">
+
+          <div class="eyes">
+        <div class="eye"></div>
+        <div class="eye"></div>
+      </div>
+    <!-- css -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* box-sizing: 属性允许以特定的方式定义匹配某个区域的特定元素 */
+      }
+
+
+      .eyes {
+        top: 50px;
+        left: 40px;
+        position: relative;
+        display: flex;
+      }
+      .eyes .eye {
+        width: 80px;
+        height: 80px;
+        background: WHITE;
+        border-radius: 50%;
+        position: relative;
+        display: block;
+        margin: 0 15px;
+      }
+
+      .eyes .eye::before {
+        position: absolute;
+        content: " ";
+        top: 50%;
+        left: 30px;
+        width: 40px;
+        height: 40px;
+        background: #333;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      document.querySelector("body").addEventListener("mousemove", eyeball);
+      function eyeball() {
+        var eye = document.querySelectorAll(".eye");
+        eye.forEach(function(eye) {
+          let x = eye.getBoundingClientRect().left + eye.clientWidth / 2;
+          let y = eye.getBoundingClientRect().top + eye.clientHeight / 2;
+          let radian = Math.atan2(event.pageX - x, event.pageY - y);
+          let rot = radian * (180 / Math.PI) * -1 + 0;
+          eye.style.transform = "rotate(" + rot + "deg)";
+        });
+      }
+    </script>    
     
+    <div class="smile">
+        <div class="corner"></div>
+        <div class="corner right"></div>
+    </div>
+</div>
+      </div>
   </div>
-<a href="1 Apple.html"><img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit1" alt="fruit1"></a>
-<img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit2" alt="fruit2">
-<img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit3" alt="fruit3">
-<img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit2" alt="fruit4">
-<img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit3" alt="fruit5">
-<img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit1" alt="fruit6">
-<img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit2" alt="fruit7">
-<img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit3" alt="fruit8">
-<img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit2" alt="fruit9">
-<img class="fruit" src="https://via.placeholder.com/50x50.png?text=fruit3" alt="fruit10">
+  
+<a href="02 Gridpage.html"><img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077075321611894844/APPLE.png" alt="fruit1">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077075321611894844/APPLE.png" alt="fruit2">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077076240705527848/grape.png" alt="fruit3">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077075321611894844/APPLE.png" alt="fruit4">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077076240705527848/grape.png" alt="fruit5">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077076240705527848/grape.png" alt="fruit6">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077076020588458024/Onion.png" alt="fruit7">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077076005237301298/Corn.png" alt="fruit8">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077076005237301298/Corn.png" alt="fruit9">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077076005237301298/Corn.png" alt="fruit10">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077076020588458024/Onion.png" alt="fruit11">
+<img class="fruit" src="https://cdn.discordapp.com/attachments/1044338037942911067/1077076020588458024/Onion.png" alt="fruit12">
+  
+  
 </div>
 
-<script src="./01 Mainpage.js"></script>
-<body>
+  <body>
