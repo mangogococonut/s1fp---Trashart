@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Arvo');
-
+@import url("https://fonts.googleapis.com/css?family=Arvo");
 body,
 html {
   display: flex;
@@ -10,10 +9,11 @@ html {
   height: 100%;
   background: #f5f4f4;
   font-size: 13px;
-  font-family: 'Arvo', monospace;
-  
-  
-  @supports(display: grid) {
+  font-family: "Arvo", monospace;
+}
+@supports (display: grid) {
+  body,
+html {
     display: block;
   }
 }
@@ -22,9 +22,10 @@ html {
   border: 1px solid #d2d0d0;
   padding: 2em;
   font-size: 1.7vw;
-  box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
-  
-  @supports(display: grid) {
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
+}
+@supports (display: grid) {
+  .message {
     display: none;
   }
 }
@@ -32,13 +33,14 @@ html {
 .section {
   display: none;
   padding: 2rem;
- 
-  
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
+  .section {
     padding: 4rem;
   }
-  
-  @supports(display: grid) {
+}
+@supports (display: grid) {
+  .section {
     display: block;
   }
 }
@@ -67,95 +69,80 @@ h1 {
   grid-column-start: auto;
   grid-row-start: auto;
   color: #fff;
-  background:  url('https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=');
+  background: url("https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=");
   background-size: cover;
   background-position: center;
-  box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
+  box-shadow: -2px 2px 10px 0px rgba(68, 68, 68, 0.4);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
   counter-increment: item-counter;
-  
-      &:nth-of-type(1) {
-    background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086330604196062/Apple_1.jpg);
-   background-position: right 35% bottom -75%;     
-        
-  }
-  
-    &:nth-of-type(2) {
-    background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086332739096636/Onion_2.jpg);
-  }
-  
-  &:nth-of-type(3) {
-    background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086331367559188/Corn_1.jpg);
-  }
-  
-  &:nth-of-type(4) {
-    background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086331367559188/Corn_1.jpg);
-  }
-  
-  &:nth-of-type(5) {
-    background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086330868432977/Apple_2.jpg);
-  }
-  
-  &:nth-of-type(6) {
-    background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086332445499513/Onion_1.jpg);
-  }
-  
-    &:nth-of-type(7n) {
-    background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086332445499513/Onion_1.jpg);
-  }
-  
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color:#787878;
-    opacity: 0.2;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  &:hover {
-    transform: scale(1.05);
-    
-    &:after {
-      opacity: 0;
-    }
-  }
-
-  &--medium {
+}
+.item:nth-of-type(1) {
+  background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086330604196062/Apple_1.jpg);
+  background-position: right 35% bottom -75%;
+}
+.item:nth-of-type(2) {
+  background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086332739096636/Onion_2.jpg);
+}
+.item:nth-of-type(3) {
+  background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086331367559188/Corn_1.jpg);
+}
+.item:nth-of-type(4) {
+  background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086331367559188/Corn_1.jpg);
+}
+.item:nth-of-type(5) {
+  background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086330868432977/Apple_2.jpg);
+}
+.item:nth-of-type(6) {
+  background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086332445499513/Onion_1.jpg);
+}
+.item:nth-of-type(7n) {
+  background-image: url(https://cdn.discordapp.com/attachments/1074085551042469999/1074086332445499513/Onion_1.jpg);
+}
+.item:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #787878;
+  opacity: 0.2;
+  transition: opacity 0.3s ease-in-out;
+}
+.item:hover {
+  transform: scale(1.05);
+}
+.item:hover:after {
+  opacity: 0;
+}
+.item--medium {
+  grid-row-end: span 2;
+}
+.item--large {
+  grid-row-end: span 3;
+}
+.item--full {
+  grid-column-end: auto;
+}
+@media screen and (min-width: 768px) {
+  .item--full {
+    grid-column: 1/-1;
     grid-row-end: span 2;
   }
-
-  &--large {
-    grid-row-end: span 3;
-  }
-
-  &--full {
-    grid-column-end: auto;
-
-    @media screen and (min-width: 768px) {
-      grid-column: 1/-1;
-      grid-row-end: span 2;
-    }
-  }
-  
-  &__details {
-    position: relative;
-    z-index: 1;
-    padding: 15px;
-    color: #444;
-    background: #fff;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    color: #828282;
-    
-    &:before {
-      content: counter(item-counter);
-      font-weight: bold;
-      font-size: 1.1rem;
-      padding-right: 0.5em;
-      color: #444;
-    }
-  }
+}
+.item__details {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  color: #444;
+  background: #fff;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  color: #828282;
+}
+.item__details:before {
+  content: counter(item-counter);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding-right: 0.5em;
+  color: #444;
 }
