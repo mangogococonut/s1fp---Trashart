@@ -232,10 +232,8 @@ div.corner {
         transform: translate(-50%, -50%);
       }
 
-#icon{
+#icon {
   position: fixed;
-  right:20px;
-  bottom:20px;
-/*   background-image: url("https://cdn.discordapp.com/attachments/1074085551042469999/1078015613928214528/Info_Icon_.png");
-  background-size: contain; */
-
+  right: 20px;
+  bottom: 20px;
+  }
